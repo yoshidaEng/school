@@ -1,0 +1,25 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins"as m;
+
+/* case-list
+------------------------------------------------------ */
+.case-list {
+    margin-top: 97px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+    list-style: none;
+}
+
+.case-list__item:not(:first-child) {
+    margin-top: 60px;
+}
+
+@include m.medium {
+    .case-list {
+        margin-top: 137px;
+    }
+    .case-list__item:not(:first-child) {
+        margin-top: 0;
+    }
+}

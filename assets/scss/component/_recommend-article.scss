@@ -1,0 +1,81 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins"as m;
+
+/* おすすめ記事
+------------------------------------------------------ */
+.recommend-article {
+    padding-top: 60px;
+    padding-bottom: 30px;
+
+    .section__title {
+        color: v.$c_key1;
+        font-size: 26px;
+        line-height: 1.5;
+    }
+}
+
+.recommend-article__title {
+    margin-top: 30px;
+    color: v.$c_key1;
+    font-size: 18px;
+    line-height: 1.5;
+    a {
+        color: inherit;
+    }
+}
+
+.recommend-article__date {
+    color: v.$c_key1;
+    line-height: 1.8;
+}
+
+.recommend-article__list {
+    margin: 0;
+    margin-top: 30px;
+    margin-bottom: 72px;
+    padding: 0;
+}
+.recommend-article__item {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 28px;
+}
+
+.recommend-article__body {
+    margin-top: 30px;
+}
+
+.recommend-article__thumb {
+    position: relative;
+    img {
+        width: 100%;
+        max-width: none;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.recommend-article__tag {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@include m.small {
+    .recommend-article__item {
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .recommend-article__body {
+        flex-grow: 1;
+        width: calc((348/590)*100%);
+        margin-top: 0;
+    }
+
+    .recommend-article__thumb {
+        flex-shrink: 0;
+        width: calc((210/590)*100%);
+        margin-right: 32px;
+    }
+}

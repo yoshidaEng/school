@@ -1,0 +1,39 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins"as m;
+
+/* グリッドレイアウト
+------------------------------------------------------ */
+.grid {
+    display: grid;
+}
+
+/*ブログ詳細 2カラムレイアウト用*/
+.grid-pc-col2 {
+    grid-template-areas:
+    "content"
+    "aside";
+    grid-template-columns: auto;
+    // grid-template-rows: 1fr 1fr;
+    @include m.large {
+        gap: 36px;
+        grid-template-areas: "content aside";
+    }
+}
+
+.grid-col2 {
+    @include m.large {
+        gap: 67px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+.grid-col3 {
+    @include m.medium {
+        gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include m.large {
+        gap: 30px;
+        grid-template-columns: repeat(3,1fr);
+    }
+}

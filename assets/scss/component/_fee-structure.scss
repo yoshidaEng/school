@@ -1,0 +1,41 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins"as m;
+
+/* 料金体系
+------------------------------------------------------ */
+.fee-structure__lead {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+
+.fee-structure__box {
+    width: 280px;
+    height: 90px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 34px 0;
+    background: v.$c_key1;
+    color: v.$c_white;
+    font-size: 22px;
+    line-height: 1;
+    text-align: center;
+}
+
+.fee-structure__text {
+    margin-top: 45px;
+    line-height: 1.7;
+}
+
+@include m.medium {
+    .fee-structure__lead {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .fee-structure__box {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}

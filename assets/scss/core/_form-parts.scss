@@ -1,0 +1,98 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+/*----------------------------------------
+	Form Parts
+----------------------------------------*/
+/*各フォーム部品の基本スタイルを上書きします*/
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="search"],
+textarea,
+select {
+    width: 100%;
+    padding: 18px 20px;
+    border: 1px solid v.$c_text;
+    border-radius: 4px;
+    background: #fff;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 500;
+    -webkit-appearance: none;
+    appearance: none;
+}
+// input[type="number"],
+// input[type="password"] {
+//     width: 100%;
+//     padding: 10px 20px;
+//     border: 1px solid v.$c_text;
+//     border-radius: 4px;
+//     background: #fff;
+// }
+/*フォーカス時*/
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+textarea:focus,
+select:focus,
+input[type="number"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(168,142,37,0.7);
+}
+
+/*ラジオボタン*/
+// input[type="radio"] {
+//     opacity: 0;
+//     position: absolute;
+// }
+/*ラジオボタン選択範囲*/
+// input[type="radio"] + span {
+//     display: inline-block;
+//     position: relative;
+//     margin: 0 2em 0 0;
+//     padding: 0.3em 0.3em 0.3em 2.4375em;
+//     line-height: 1;
+//     cursor: pointer;
+//     vertical-align: middle;
+// }
+
+/*ラジオボタンスタイル*/
+// input[type="radio"] + span::before {
+//     position: absolute;
+//     top: 0.25em;
+//     left: 0;
+//     width: 1.375em;
+//     height: 1.375em;
+//     border: 1px solid v.$c_text;
+//     border-radius: 50%;
+//     line-height: 1;
+//     content: "";
+// }
+
+/*ラジオボタンチェック印(未選択)*/
+// input[type="radio"]+span:after {
+//     content: "";
+//     display: none;
+// }
+
+/*ラジオボタンチェック印(選択)*/
+// input[type="radio"]:checked+span::after {
+//     display: block;
+//     position: absolute;
+//     top: 0.45em;
+//     left: 0.2em;
+//     width: 1em;
+//     height: 1em;
+//     margin: 0;
+//     padding: 0;
+//     border-radius: 50%;
+//     background: v.$c_text;
+//     line-height: 1;
+// }
+
+
+

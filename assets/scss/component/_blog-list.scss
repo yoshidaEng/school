@@ -1,0 +1,90 @@
+/* ブログ
+------------------------------------------------------ */
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins"as m;
+.blog-list {
+    margin: 0;
+    padding: 0;
+    color: v.$c_key1;
+    list-style: none;
+}
+
+.blog-list__item {
+    display: flex;
+    flex-direction: column-reverse;
+    &:not(:first-child) {
+        margin-top: 60px;
+    }
+}
+.blog-list__date {
+    display: block;
+    margin-top: 20px;
+    font-weight: 500;
+    line-height: 1.8;
+}
+
+.blog-list__title {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    word-break: break-all;
+    a {
+        color: inherit;
+    }
+}
+
+.blog-list__text {
+    margin-top: 20px;
+}
+
+.blog-list__thumb {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    &::before {
+        display: block;
+        padding-top: calc((179/240)*100%);
+        content: "";
+    }
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        max-width: none;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.blog-list__tag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+
+@include m.medium {
+    .blog-list__item {
+        flex-direction: row-reverse;
+    }
+
+    .blog-list__thumb {
+        flex-shrink: 0;
+        width: calc((240/900)*100%);
+        height: auto;
+        margin-top: 0;
+        margin-right: 50px;
+    }
+
+    .blog-list__body {
+        flex-grow: 1;
+    }
+
+    .blog-list__date {
+        margin-top: 0;
+    }
+    .blog-list__title {
+        font-size: 26px;
+    }
+}

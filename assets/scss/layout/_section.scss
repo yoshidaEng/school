@@ -1,0 +1,45 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins"as m;
+
+/* Section
+------------------------------------------------------ */
+.section {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.section:not(.section--bg) + .section:not(.section--bg) {
+    padding-top: 0;
+}
+.section--bg {
+    margin-right: calc(50% - 50vw);
+    margin-left: calc(50% - 50vw);
+    padding-right: calc(50vw - 50%);
+    padding-left: calc(50vw - 50%);
+}
+
+.section._case {
+    background-color: v.$c_key1;
+}
+
+.section__title {
+    color: v.$c_key1;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.4;
+    text-align: center;
+    &--white {
+        color: v.$c_white;
+    }
+}
+
+.section-2col-wrapper {
+    padding-top: 90px;
+    padding-bottom: 120px;
+}
+
+@include m.medium {
+    .section__title {
+        font-size: 36px;
+    }
+}

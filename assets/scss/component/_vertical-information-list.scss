@@ -1,0 +1,25 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins"as m;
+
+/* vertical-information-list
+-------------------------------------------*/
+.vertical-information-list {
+    padding: 0;
+    color: v.$c_text;
+    list-style: none;
+}
+
+.vertical-information-list__item:not(:first-child) {
+    margin-top: 55px;
+}
+
+.vertical-information-list__link {
+    display: block;
+    margin-top: 16px;
+    color: inherit;
+}
+
+.vertical-information-list__date {
+    font-size: 12px;
+    line-height: 1.7;
+}

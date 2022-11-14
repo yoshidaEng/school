@@ -1,0 +1,49 @@
+//変数読み込み
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins"as m;
+
+/*フッター
+------------------------------------------------------ */
+.footer {
+    background-color: v.$c_key1;
+}
+
+.footer__inner {
+    max-width: 940px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 35px 20px 68px;
+}
+
+.footer__box {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.footer__nav {
+    margin-top: 40px;
+}
+
+.footer__calling {
+    padding: 0 22px;
+    margin-top: 40px;
+    .calling__hour {
+        margin-top: 13px;
+    }
+}
+
+@include m.medium {
+    .footer__box {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer__nav {
+        margin-top: 0;
+    }
+
+    .footer__calling {
+        margin-top: 27px;
+        text-align: right;
+    }
+}

@@ -1,0 +1,92 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins"as m;
+
+/* トップページ ブログリスト
+------------------------------------------------------ */
+.top-blog-list {
+    padding: 0;
+    list-style: none;
+}
+
+.top-blog-list__inner {
+    display: flex;
+    flex-direction: column-reverse;
+}
+.top-blog-list__item {
+    &:not(:first-child) {
+        margin-top: 30px;
+    }
+}
+.top-blog-list__link {
+    text-decoration: none;
+}
+.top-blog-list__title {
+    margin-top: 15px;
+    color: v.$c_text;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.7;
+    text-decoration: underline;
+    word-break: break-all;
+}
+.top-blog-list__date {
+    display: block;
+    margin-top: 20px;
+    color: v.$c_text;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.top-blog-list__thumb {
+    position: relative;
+    width: 100%;
+    height: auto;
+    img {
+        width: 100%;
+        max-width: none;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.top-blog-list__tag {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@include m.medium {
+    .top-blog-list__inner {
+        flex-direction: row-reverse;
+    }
+    .top-blog-list__title {
+        margin-top: 0;
+        font-size: 16px;
+    }
+
+    .top-blog-list__thumb {
+        flex-shrink: 0;
+        width: calc((300/900)*100%);
+        height: auto;
+        margin-top: 0;
+        margin-right: 20px;
+    }
+
+    .top-blog-list__body {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: space-between;
+    }
+
+    .top-blog-list__date {
+        margin: 0
+    }
+}
+
+@include m.large {
+    .top-blog-list__thumb {
+        width: 150px;
+        height: 110px;
+    }
+}

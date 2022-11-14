@@ -1,0 +1,21 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins"as m;
+
+/* カテゴリ一覧
+------------------------------------------------------ */
+.cat-widget {
+    margin-top: 30px;
+    padding-left: 25px;
+    color: v.$c_key1;
+    font-weight: bold;
+    li {
+        &:not(:first-child) {
+            margin-top: 16px;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+}
+

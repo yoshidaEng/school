@@ -1,0 +1,27 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+/* パンくずリスト
+------------------------------------------------------ */
+.breadcrumb {
+    background-color: v.$c_gray1;
+    color: v.$c_key1;
+    box-sizing: content-box;
+    & + * {
+        margin-top: 60px;
+    }
+}
+
+.breadcrumb__inner {
+    max-width: v.$width;
+    padding: 19px 20px;
+    margin-right: auto;
+    margin-left: auto;
+    span {
+        a {
+            color: v.$c_key1;
+        }
+    }
+}
+
+

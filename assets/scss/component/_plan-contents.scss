@@ -1,0 +1,32 @@
+
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins"as m;
+
+/* プラン内容
+------------------------------------------------------ */
+.plan-contents {
+    list-style: none;
+    padding: 0;
+    margin-top: 48px;
+    text-align: center;
+}
+
+.plan-contents__item {
+    position: relative;
+    &:not(:first-child) {
+        margin-top: 23px;
+    }
+}
+
+.plan-contents__item::before {
+    display: block;
+    content: "";
+    top: 0.5em;
+    left: -0.3em;
+    position: absolute;
+    width: 10px;
+    height: 5px;
+    border-left: 2px solid v.$c_key1;
+    border-bottom: 2px solid v.$c_key1;
+    transform: rotate(-45deg);
+}

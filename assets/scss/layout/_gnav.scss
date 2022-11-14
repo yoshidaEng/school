@@ -1,0 +1,41 @@
+//変数読み込み
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins"as m;
+
+/* グローバルナビゲーション
+------------------------------------------------------ */
+.gnav {
+    display: none;
+    margin-left: 28px;
+    color: v.$c_key1;
+    font-weight: bold;
+}
+
+.gnav__list {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.gnav__item {
+    &:not(:last-child) {
+        margin-right: 28px;
+    }
+}
+
+.gnav__link {
+    color: inherit;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.8;
+    text-decoration: none;
+}
+
+@include m.large {
+    .gnav {
+        display: block;
+    }
+}

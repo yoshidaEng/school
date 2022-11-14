@@ -1,0 +1,41 @@
+/* お知らせ一覧
+------------------------------------------------------ */
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins"as m;
+.information-list {
+    margin-top: 45px;
+    padding: 0;
+    border-bottom: 1px solid v.$c_gray3;
+    list-style: none;
+}
+
+.information-list__item {
+    padding: 24px 0;
+    border-top: 1px solid v.$c_gray3;
+}
+
+.information-list__date {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.9;
+}
+
+.information-list__title {
+    a {
+        color: v.$c_key1;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5;
+    }
+}
+
+@include m.medium {
+    .information-list__item {
+        display: flex;
+        align-items: center;
+    }
+
+    .information-list__header {
+        margin-right: 50px;
+    }
+}

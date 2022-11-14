@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+/* カテゴリ一覧
+------------------------------------------------------ */
+
+.cat-widget {
+  margin-top: 30px;
+  padding-left: 25px;
+  color: #1B224C;
+  font-weight: bold;
+}
+
+.cat-widget li:not(:first-child) {
+  margin-top: 16px;
+}
+
+.cat-widget li a {
+  color: inherit;
+  text-decoration: none;
+}
+/*# sourceMappingURL=../map/component/cat-widget.css.map */

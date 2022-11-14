@@ -1,0 +1,77 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins"as m;
+
+/* media
+------------------------------------------------------ */
+.media {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.media__body {
+    margin-top: 30px;
+}
+
+.media__title {
+    margin-top: 35px;
+    color: v.$c_text;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.media__text {
+    margin-top: 40px;
+    p {
+        color: v.$c_text;
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
+
+.media__thumb {
+    position: relative;
+    &::before {
+        display: block;
+        padding-top: calc((240/350)*100%);
+        content: "";
+    }
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        max-width: none;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@include m.medium {
+    .media {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .media__body {
+        flex-grow: 1;
+        width: calc((500/900)*100%);
+        margin-top: 0;
+    }
+
+    .media__thumb {
+        flex-shrink: 0;
+        width: calc((350/900)*100%);
+        margin-left: 50px;
+    }
+
+    .media._reverse {
+        flex-direction: row-reverse;
+
+        .media__thumb {
+            margin-right: 50px;
+            margin-left: 0;
+        }
+    }
+}

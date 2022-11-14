@@ -1,0 +1,38 @@
+//変数読み込み
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins"as m;
+
+/* ヘッダー
+------------------------------------------------------ */
+.header {
+    height: 90px;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 15px 15px 10px ;
+}
+
+.header__btn-box {
+    display: none;
+}
+
+.header__calling {
+    margin-top: 15px;
+    text-align: right;
+}
+
+@include m.medium {
+    .header__btn-box {
+        display: block;
+    }
+
+    .header__calling {
+        margin-right: 23px;
+        margin-left: auto;
+    }
+}
+

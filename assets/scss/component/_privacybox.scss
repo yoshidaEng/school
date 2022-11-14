@@ -1,0 +1,21 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins"as m;
+
+/* PrivacyBox
+------------------------------------------------------ */
+.privacybox {
+    color: v.$c_text;
+    text-align: center;
+}
+.privacybox-text {
+    font-weight: 500;
+    a {
+        color: v.$c_red1;
+    }
+}
+
+.privacy-checkbox {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}

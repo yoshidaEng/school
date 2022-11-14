@@ -1,0 +1,14 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins"as m;
+
+/* usage-flow-list
+------------------------------------------------------ */
+.usage-flow-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 53px;
+}
+
+.usage-flow-list__item:not(:first-child) {
+    margin-top: 8px;
+}

@@ -1,0 +1,16 @@
+/* コピーライト
+------------------------------------------------------ */
+@use "../abstracts/variables" as val;
+.copyright {
+    background-color: #fff;
+    &__inner {
+        max-width: 940px;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 12px 20px;
+    }
+    & p {
+        color: val.$c_text;
+        text-align: right;
+    }
+}

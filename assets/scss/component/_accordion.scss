@@ -1,0 +1,8 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins"as m;
+
+/* Accordion Panel
+-------------------------------------------*/
+.accordion__panel {
+    display: none;
+}

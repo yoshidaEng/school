@@ -1,0 +1,64 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins"as m;
+
+/* 料金表
+------------------------------------------------------ */
+.plan-list {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 0;
+    margin-top: 70px;
+    padding: 0;
+    list-style: none;
+}
+
+.plan-list__item {
+    flex-shrink: 0;
+    width: 219px;
+    border: 0.5px solid v.$c_key1;
+    &:not(:last-child) {
+        margin-right: 6px;
+    }
+}
+
+.plan-list__body {
+    height: 414px;
+    padding: 30px 20px;
+}
+.plan-list__title {
+    padding: 20px;
+    background: v.$c_key1;
+    color: v.$c_white;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 2.1;
+    text-align: center;
+    span {
+        display: block;
+    }
+}
+.plan-list__title._recommend {
+    background: v.$c_red1;
+    line-height: 1.7;
+}
+.plan-list__price {
+    color: v.$c_key1;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 1.6;
+    text-align: center;
+    span {
+        display: block;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    &._recommend {
+        color: v.$c_red1;
+    }
+}
+.plan-list_p-disc {
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: center;
+}

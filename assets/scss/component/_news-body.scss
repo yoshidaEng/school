@@ -1,0 +1,163 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins"as m;
+
+/* 投稿記事 本文
+------------------------------------------------------ */
+.news-body {
+    padding-top: 60px;
+    padding-bottom: 53px;
+      //floatのclear忘れがあっても本文エリア内で解除されるようにしておく
+    &::after {
+        display: block;
+        clear: both;
+        content:"";
+    }
+
+    h2 {
+        color: v.$c_key1;
+        font-size: 26px;
+        font-weight: bold;
+        line-height: 1.5;
+    }
+
+    h3 {
+        margin-top: 33px;
+        padding-left: 10px;
+        border-left: 4px solid v.$c_key1;
+        color: v.$c_key1;
+        font-size: 22px;
+        font-weight: bold;
+        line-height: 1.5;
+    }
+
+    h4 {
+        margin-top: 30px;
+        color: v.$c_key1;
+        font-size: 18px;
+    }
+
+    h5 {
+        margin-top: 30px;
+        color: v.$c_key1;
+        font-size: 18px;
+    }
+
+    h6 {
+        margin-top: 30px;
+        color: v.$c_key1;
+        font-size: 18px;
+    }
+
+    p {
+        margin-top: 30px;
+        font-size: 16px;
+        font-weight: 500;
+        & + * {
+            margin-top: 30px;
+        }
+    }
+
+    ul {
+        margin-top: 36px;
+        padding: 0;
+        list-style: none;
+        li {
+            position: relative;
+            padding-left: 20px;
+        }
+        li::before {
+            display: inline-block;
+            position: absolute;
+            top: 0.4em;
+            left: 0;
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background: v.$c_red1;
+            content: "";
+        }
+    }
+
+    a {
+        display: inline-block;
+        margin-top: 30px;
+        color: v.$c_red1;
+    }
+
+    blockquote {
+        position: relative;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding: 25px 25px 25px 74px;
+        background-color: #F8F8F8;
+        font-size: 16px;
+        line-height: 1.5;
+        p {
+            margin-top: 0;
+            &::before {
+            display: inline-block;
+            position: absolute;
+            position: absolute;
+            top: 16px;
+            left: 12px;
+            width: 45px;
+            height: 45px;
+            background: url(../../assets/img/icon_blockquote.png) center center / contain no-repeat;
+            content: "";
+        }
+        }
+
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+      //モバイルでは全て1カラムセンター寄せ配置
+    img.alignnone,
+    img.alignleft,
+    img.alignright,
+    img.aligncenter {
+        display: block;
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        margin-right: auto;
+        margin-left: auto;
+        overflow: hidden;
+    }
+    .wp-caption.alignnone,
+    .wp-caption.alignleft,
+    .wp-caption.alignright,
+    .wp-caption.aligncenter {
+        img {
+            display: block;
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            margin-right: auto;
+            margin-left: auto;
+            overflow: hidden;
+        }
+    }
+
+
+    // @include m.medium {
+    //     img.alignnone {
+    //         margin-left: 0;
+    //     }
+    //     img.alignleft { //画像左配置：回り込み
+    //         float: left;
+    //         max-width: 380px;
+    //         margin-right: 20px;
+    //         margin-bottom: 10px;
+    //     }
+    //     img.alignright { //画像右配置：回り込み
+    //         float: right;
+    //         max-width: 380px;
+    //         margin-left: 10px;
+    //         margin-bottom: 10px;
+    //     }
+    // }
+
+}

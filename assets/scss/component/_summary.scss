@@ -1,0 +1,19 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins"as m;
+
+/* summary
+------------------------------------------------------ */
+.summary {
+    background-color: v.$c_key1;
+}
+
+.summary__inner {
+    max-width: 900px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 63px 10px 54px;
+}
+
+.summary__item + .summary__item {
+    margin-top: 83px;
+}

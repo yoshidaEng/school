@@ -1,0 +1,23 @@
+//変数読み込み
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins"as m;
+
+/* 電話番号 営業時間
+------------------------------------------------------ */
+.calling {
+    color: v.$c_white;
+}
+.calling__num {
+    color: inherit;
+    font-size: 16px;
+    font-weight: bold;
+}
+.calling__hour {
+    color: inherit;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.calling--black {
+    color: v.$c_key1;
+}

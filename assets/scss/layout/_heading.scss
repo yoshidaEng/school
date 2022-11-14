@@ -1,0 +1,23 @@
+/* 見出し
+------------------------------------------------------ */
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.heading-lv2 {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    color: v.$c_text;
+    &.align-left {
+        text-align: center;
+        @include m.large {
+            text-align: left;
+        }
+    }
+}
+
+@include m.medium {
+    .heading-lv2 {
+        font-size: 32px;
+    }
+}

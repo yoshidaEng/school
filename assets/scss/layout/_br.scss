@@ -1,0 +1,13 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins"as m;
+
+/* brタグ
+------------------------------------------------------ */
+.br-only-sp {
+    display: inline-block;
+    @include m.medium {
+        & {
+            display: none;
+        }
+    }
+}

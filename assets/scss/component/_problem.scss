@@ -1,0 +1,50 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins"as m;
+
+/* problem
+------------------------------------------------------ */
+.problem {
+    width: 100%;
+}
+.problem__title {
+    color: v.$c_white;
+    font-size: 18px;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.problem__list {
+    max-width: 580px;
+    margin-top: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.problem__item {
+    color: v.$c_white;
+    font-size: 18px;
+    line-height: 2.2;
+    &:not(:first-child) {
+        margin-top: 30px;
+    }
+}
+
+@include m.medium {
+    .problem__title {
+        font-size: 36px;
+    }
+
+    .problem__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 65px;
+    }
+
+    .problem__item:not(:first-child) {
+        margin-top: 0;
+    }
+}

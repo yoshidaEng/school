@@ -1,0 +1,16 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins"as m;
+
+/* タグ
+------------------------------------------------------ */
+.tag {
+    min-width: 80px;
+    padding: 8px 12px;
+    background: v.$c_key1;
+    color: v.$c_white;
+    font-size: 12px;
+}
+
+.tag.media__tag {
+    background-color: v.$c_red1;
+}

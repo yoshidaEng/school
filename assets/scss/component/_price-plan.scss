@@ -1,0 +1,31 @@
+/* 料金プラン
+------------------------------------------------------ */
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins"as mixin;
+.price-plan {
+    height: 217px;
+    background: url(../img/bg_fee@2x.jpg) center center / cover no-repeat;
+}
+
+.price-plan__inner {
+    display: grid;
+    align-content: center;
+    height: 100%;
+    justify-items: center;
+}
+
+.price-plan__text {
+    margin-bottom: 25px;
+    color: v.$c_white;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: center;
+}
+
+@include mixin.medium {
+    .price-plan__text {
+        font-size: 26px;
+    }
+}
+

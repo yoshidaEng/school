@@ -1,0 +1,12 @@
+/* blog-list-wrapper
+------------------------------------------------------ */
+@use "../abstracts/mixins" as mixin;
+.blog-list-wrapper {
+    margin-bottom: 90px;
+}
+
+@include mixin.medium {
+    .blog-list-wrapper {
+        margin-bottom: 106px;
+    }
+}

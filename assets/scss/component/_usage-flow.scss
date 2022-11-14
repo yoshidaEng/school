@@ -1,0 +1,60 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins"as m;
+
+/* usage-flow
+------------------------------------------------------ */
+.usage-flow {
+    background-color: v.$c_gray1;
+}
+.usage-flow__header {
+    display: flex;
+}
+.usage-flow__num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    background-color: v.$c_red1;
+    color: v.$c_white;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.usage-flow__title {
+    width: 100%;
+    padding: 25px 21px 21px 21px;
+    border-bottom: 1px solid #C3C3C3;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 2.2;
+}
+
+.usage-flow__body {
+    width: 100%;
+    padding: 20px 21px 10px;
+
+    p {
+        font-size: 16px;
+    }
+}
+
+@include m.medium {
+    .usage-flow {
+        display: flex;
+        align-items: center;
+    }
+
+
+    .usage-flow__title {
+        width: 214px;
+        border-bottom: none;
+        font-size: 18px;
+    }
+
+    .usage-flow__text {
+        padding-left: clamp(40px, 5vw, 54px);
+        border-left: 1px solid #C3C3C3;
+        line-height: 1.7;
+    }
+
+}

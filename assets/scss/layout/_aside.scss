@@ -1,0 +1,27 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins"as m;
+
+/* サイドバー
+------------------------------------------------------ */
+.aside {
+    padding-bottom: 50px;
+    grid-area: aside;
+}
+.aside__title {
+    padding: 18px;
+    background: v.$c_key1;
+    color: v.$c_white;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1.9;
+    text-align: center;
+    &:not(:first-child) {
+        margin-top: 50px;
+    }
+}
+
+@include m.large {
+    .aside {
+        max-width: 270px;
+    }
+}

@@ -1,0 +1,43 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins"as m;
+
+/* フッターメニュー
+------------------------------------------------------ */
+.ftmenu {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    color: v.$c_gray1;
+    list-style: none;
+}
+
+.ftmenu__item {
+    padding: 6px 22px;
+}
+
+.ftmenu__link {
+    text-decoration: none;
+    color: inherit;
+    line-height: 1.7;
+}
+
+@include m.medium {
+    .ftmenu {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .ftmenu__item {
+        padding: 3px 22px;
+    }
+    .ftmenu__item:not(:last-child) {
+        border-right: 1px solid v.$c_white;
+    }
+
+    .footer__tel,
+    .footer__hour {
+        text-align: right;
+    }
+}

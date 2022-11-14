@@ -1,0 +1,36 @@
+/* 資料請求
+------------------------------------------------------ */
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins"as m;
+.request {
+    height: 256px;
+    background: url(../img/bg_cta@2x.jpg) center center / cover no-repeat;
+}
+
+.request__inner {
+    display: grid;
+    align-content: center;
+    height: 100%;
+    justify-items: center;
+    gap: 22px;
+}
+
+.request__text {
+    color: v.$c_gray1;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1.7;
+}
+
+.request__link {
+    color: v.$c_white;
+    font-family: YuGothic;
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+@include m.medium {
+    .request__text {
+        font-size: 32px;
+    }
+}

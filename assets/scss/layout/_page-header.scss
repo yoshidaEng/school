@@ -1,0 +1,41 @@
+/* ページヘッダー
+------------------------------------------------------ */
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as mixin;
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 221px;
+    padding: 0 20px;
+    text-align: center;
+    color: v.$c_white;
+}
+
+.page-header__title {
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.page-header._fee {
+    background: url(../img/bg_pageheader_fee@2x.jpg) center center / cover no-repeat;
+}
+
+.page-header._blog {
+    background: url(../img/bg_pageheader_blog@2x.jpg)center center / cover no-repeat;
+}
+
+.page-header._information {
+    background: url(../img/bg_pageheader_news@2x.jpg)center center / cover no-repeat;
+}
+
+.page-header._contact {
+    background: url(../img/bg_cta@2x.jpg)center center / cover no-repeat;
+}
+
+@include mixin.medium {
+    .page-header__title {
+        font-size: 32px;
+    }
+}
+

@@ -1,0 +1,40 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins"as m;
+
+/* お問い合わせフォーム
+------------------------------------------------------ */
+.contact:not(:first-child) {
+    margin-top: 20px;
+}
+
+/**ラジオボタン*/
+.radiolist {
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+    color: v.$c_text;
+    list-style: none;
+    > li {
+        margin-top: 12px;
+    }
+}
+
+/*入力エリア*/
+.input-field {
+    margin-top: 12px;
+    > textarea {
+        margin-top: 12px;
+        font-size: 12px;
+        line-height: 1.6;
+    }
+}
+
+/*ラベル*/
+.input-label {
+    color: v.$c_text;
+    line-height: 1.7;
+}
+
+.contact-text {
+    color: v.$c_text;
+}

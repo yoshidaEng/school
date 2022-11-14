@@ -1,0 +1,14 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins"as m;
+
+/* 投稿エリア アイキャッチ
+------------------------------------------------------ */
+.post-eyecatch {
+    height: 370px;
+    img {
+        width: 100%;
+        max-width: none;
+        height: 100%;
+        object-fit: cover;
+    }
+}

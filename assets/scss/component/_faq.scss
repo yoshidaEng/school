@@ -1,0 +1,61 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins"as m;
+
+/* FAQ
+-------------------------------------------*/
+.faq {
+    border-top: 1px solid v.$c_key1;
+    &:last-child {
+        border-bottom: 1px solid v.$c_key1;
+    }
+}
+
+/*質問*/
+.faq__question {
+    display: flex;
+    align-items: center;
+    padding: 15px 10px;
+    padding: 25px 10px 25px 0;
+    background-color: v.$c_white;
+    text-align: left;
+    cursor: pointer;
+}
+
+.faq__a-text {
+    padding: 25px;
+    background-color: v.$c_gray1;
+    margin-bottom: 15px;
+}
+
+.faq__q-text {
+    flex-grow: 1;
+    line-height: 1.7;
+}
+
+.faq__action {
+    display: block;
+    position: relative;
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    margin-left: auto;
+    &::before,
+    &::after {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 0;
+        margin: auto;
+        transition: all .3s;
+        border-top: 3px solid;
+        content: "";
+    }
+    &::after {
+        transform: rotate(90deg);
+        .faq__question[aria-expanded="true"] & {
+        transform: rotate(0);
+        }
+    }
+}

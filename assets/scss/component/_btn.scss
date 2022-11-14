@@ -1,0 +1,106 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins"as m;
+
+/* ボタン
+------------------------------------------------------ */
+
+/*資料請求*/
+.request-btn {
+    display: inline-block;
+    min-width: 142px;
+    padding: 17px 10px;
+    border-radius: 5px;
+    background: v.$c_red1;
+    color: v.$c_white;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+        opacity: 0.7;
+    }
+}
+/*お問合わせボタン*/
+.contact-btn {
+    display: inline-block;
+    min-width: 137px;
+    padding: 17px 10px;
+    border-radius: 5px;
+    background: v.$c_key1;
+    color: v.$c_white;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+        opacity: 0.7;
+    }
+}
+/*円形ボタン*/
+.rounded-btn {
+    display: inline-block;
+    min-width: 280px;
+    padding: 1em 1em;
+    border-radius: 1.93em;
+    background: v.$c_red1;
+    color: #338833;
+    color: v.$c_white;
+    line-height: 1.8;
+    text-align: center;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+        opacity: 0.7;
+    }
+}
+
+.rounded-btn._price-plan {
+    min-width: 200px;
+    border: 1px solid v.$c_white;
+    background: transparent;
+    font-size: 16px
+}
+
+/*ボタン共通*/
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 16px;
+    transition: all .3s;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+        opacity: 0.7;
+    }
+}
+
+/*フォーム送信ボタン*/
+.btn--action {
+    max-width: 200px;
+    border-radius: 6px;
+    background: v.$c_key1;
+    color: v.$c_white;
+}
+
+/*中央揃え*/
+.btn-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    >* + * {
+        margin-top: 80px;
+    }
+}
+
+
+/*戻るボタン*/
+.btn--back {
+    font-weight: 500;
+    text-decoration: underline;
+    color: v.$c_text;
+}

@@ -1,0 +1,85 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins"as m;
+
+/* 関連記事
+------------------------------------------------------ */
+.related-article {
+    margin: 0;
+    margin-top: 30px;
+    padding: 0;
+}
+
+.related-article__item {
+    display: flex;
+    flex-direction: column-reverse;
+    &:not(:first-child) {
+        margin-top: 40px;
+    }
+}
+
+.related-article__title {
+    margin-top: 15px;
+    font-size: 16px;
+    line-height: 2;
+    word-break: break-all;
+    a {
+        color: v.$c_key1;
+    }
+}
+
+.related-article__thumb {
+    position: relative;
+    width: 100%;
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        max-width: none;
+        height: 100%;
+        object-fit: cover;
+    }
+    &::before {
+        display: block;
+        padding-top: calc((70/100)*100%);
+        content: "";
+    }
+}
+
+@include m.small {
+    .related-article__item {
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .related-article__thumb {
+        flex-shrink: 0;
+        width: calc((210/590)*100%);
+        margin-right: 32px;
+    }
+    .related-article__body {
+        flex-grow: 1;
+        width: calc((348/590)*100%);
+        margin-top: 0;
+    }
+
+    .related-article__title {
+        margin-top: 0;
+        font-size: 16px;
+    }
+}
+
+@include m.large {
+    .related-article__thumb {
+        width: 100px;
+        height: 70px;
+        img {
+            height: 100%;
+        }
+    }
+    .related-article__title {
+        font-size: 12px;
+    }
+}
+

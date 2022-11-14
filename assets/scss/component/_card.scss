@@ -1,0 +1,64 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins"as m;
+
+/* case
+------------------------------------------------------ */
+.card__lead {
+    color: v.$c_white;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.8;
+}
+
+.card__thumb {
+    position: relative;
+    margin-top: 9px;
+    &::before {
+        display: block;
+        padding-top: calc((171/280)*100%);
+        content: "";
+    }
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        max-width: none;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.card__body {
+    margin-top: 16px;
+}
+
+.card__profile {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__work {
+    width: calc((100/280)*100%);
+    padding: 8px 10px;
+    background-color: v.$c_white;
+    color: v.$c_text;
+    font-size: 16px;
+}
+
+.card__name {
+    width: calc((172/280)*100%);
+    padding: 8px 10px;
+    background-color: v.$c_white;
+    color: v.$c_text;
+}
+
+.card__performance {
+    width: 100%;
+    margin-top: 16px;
+    padding: 8px 10px;
+    background-color: v.$c_white;
+    color: v.$c_text;
+    font-size: 16px;
+    line-height: 1.8;
+}

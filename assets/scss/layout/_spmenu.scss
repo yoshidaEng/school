@@ -1,0 +1,44 @@
+/* spmenu
+------------------------------------------------------ */
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins"as m;
+.spmenu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #1B224C;
+    z-index: v.$zi_menu;
+    overflow-x: hidden;
+    overflow-y: auto;
+    &__inner {
+        padding: 28px 20px;
+    }
+    @include m.large {
+        display: none !important;
+    }
+}
+
+.spmenu__list {
+    margin-top: 34px;
+    padding: 0;
+    color: #fff;
+    list-style: none;
+}
+
+.spmenu__item {
+    margin-top: 20px;
+}
+
+.spmenu__link {
+    display: block;
+    padding: 10px;
+    color: inherit;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+

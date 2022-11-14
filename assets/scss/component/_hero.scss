@@ -1,0 +1,54 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins"as m;
+
+/* ヒーロー画像
+------------------------------------------------------ */
+.hero {
+    height: 476px;
+    background: url(../img/bg_mv@2x.jpg) center center / cover no-repeat;
+}
+
+.hero__inner {
+    display: grid;
+    align-content: center;
+    height: 100%;
+    text-align: center;
+    justify-items: center;
+}
+
+.hero__title {
+    color: v.$c_white;
+    font-size: 28px;
+    line-height: 1.4;
+}
+
+.hero__text {
+    margin-top: 25px;
+    color: v.$c_white;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.hero__btn {
+    min-width: 260px;
+    margin-top: 51px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.hero__link {
+    margin-top: 22px;
+    color: v.$c_white;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+@include m.medium {
+    .hero {
+        background-position: center center;
+    }
+
+    .hero__title {
+        font-size: 48px;
+    }
+}

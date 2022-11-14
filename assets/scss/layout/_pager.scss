@@ -1,0 +1,32 @@
+/* ページネーション
+------------------------------------------------------ */
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins"as m;
+.pager {
+    text-align: center;
+}
+
+.page-numbers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 17px 20px;
+    border: 0;
+    color: v.$c_text;
+    font-size: 16px;
+    font-weight: bold;
+    list-style: none;
+    text-decoration: none;
+    > li {
+        border: 1px solid v.$c_text;
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+}
+
+.page-numbers[aria-current="page"] {
+    background-color: v.$c_key1;
+    color: v.$c_white;
+}
